@@ -1,0 +1,15 @@
+export const contacts = [
+  { icon: 'phone', path: '+1234567890' },
+  { icon: 'email', path: 'info@email.com' },
+  { icon: 'facebook', path: 'https://www.facebook.com' },
+  { icon: 'instagram', path: 'https://www.instagram.com' },
+  { icon: 'twitter', path: 'https://www.twitter.com' },
+  { icon: 'github', path: 'https://github.com' },
+  { icon: 'linkedin', path: 'https://www.linkedin.com' },
+  { icon: 'youtube', path: 'https://www.youtube.com' },
+  { icon: 'pinterest', path: 'https://www.pinterest.com' },
+  { icon: 'reddit', path: 'https://www.reddit.com' },
+  { icon: 'twitch', path: 'https://www.twitch.tv' },
+  { icon: 'whatsapp', path: 'https://wa.me/1234567890' },
+  { icon: 'telegram', path: 'https://t.me/yourchannel' },
+];

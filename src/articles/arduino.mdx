@@ -1,0 +1,45 @@
+export const metadata = {
+  title: "Arduino",
+  description: "Open-source Electronics Platform",
+  date: 'Jan 2023',
+  image: '/arduino.webp',
+  role: "Developer",
+};
+
+## Getting Started with Arduino
+
+**Arduino** is an open-source electronics platform based on easy-to-use hardware and software. It is widely used for building interactive projects that can control physical devices, such as lights, motors, and sensors. Arduino makes it easy to build your own electronics, whether you're working on a robotics project, home automation, or just learning about electronics.
+
+## Key Features of Arduino
+
+- **Microcontroller-based:** Arduino boards contain a microcontroller that can be programmed to interact with various components like sensors, LEDs, motors, and displays.
+- **Open-source Hardware and Software:** Both the hardware and software are open-source, meaning you can modify and customize your project without restrictions.
+- **Extensive Library Support:** Arduino has a vast collection of libraries and examples that simplify the process of building and programming hardware projects.
+- **Easy-to-use IDE:** The Arduino IDE (Integrated Development Environment) allows you to write, compile, and upload your programs to the board with ease.
+- **Cross-platform Support:** Arduino software works on Windows, Mac OS X, and Linux, providing a versatile development environment for all types of users.
+
+## Setting Up a Simple Arduino Project
+
+### Step 1: Install the Arduino IDE
+
+Download and install the **Arduino IDE** from the official website: [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software). This IDE will allow you to write and upload your code to the Arduino board.
+
+### Step 2: Choose Your Arduino Board
+
+Once the IDE is installed, connect your Arduino board to your computer via USB. In the Arduino IDE, go to **Tools > Board** and select the appropriate board (e.g., Arduino Uno, Arduino Nano, etc.).
+
+### Step 3: Write a Simple Program
+
+Create a simple program to blink an LED using the following code:
+
+```cpp
+void setup() {
+  pinMode(13, OUTPUT); // Set the LED pin (usually pin 13) as an output
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // Turn on the LED
+  delay(1000);             // Wait for 1 second
+  digitalWrite(13, LOW);  // Turn off the LED
+  delay(1000);             // Wait for 1 second
+}
