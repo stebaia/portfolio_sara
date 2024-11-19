@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-	"baseUrl": ".", 
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,9 +22,36 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/projects/(list)/spring/page.tsx~", "src/mdx-components.tsx~", "src/app/projects/[article]/page.tsx~", "src/app/projects/[article]/layout.tsx~", "src/app/projects/[article]/numpy/page.tsx~", "src/app/projects/(list)/layout.tsx~"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/appSidebar.tsx~",
+    "src/components/PostList.tsx~",
+    "src/components/Toc.tsx~",
+    "src/components/cardApp.tsx~",
+    "src/app/post/[slug]/page.tsx~",
+    "src/components/Breadcrumb.tsx~",
+    "src/app/(app)/pomodoro/page.tsx~",
+    "src/app/(app)/page.tsx~",
+    "src/app/newPost/page.tsx~",
+    "src/app/(app)/tomato/page.tsx~",
+    "src/app/(app)/toDoList/page.tsx~",
+    "src/app/(app)/apps/page.tsx~",
+    "src/app/updatePost/page.tsx~",
+    "src/components/blogPage.tsx~",
+    "src/components/TableActivities.tsx~",
+    "src/app/post/page.tsx~",
+    "src/app/(auth)/login/page.tsx~"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

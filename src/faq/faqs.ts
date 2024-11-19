@@ -1,3 +1,5 @@
+import {AccItem} from '../components/accordionFooter'
+
 export const accordionData: AccItem[] = [
   {
     question: 'What type of projects do you take on?',

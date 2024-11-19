@@ -20,13 +20,13 @@ const Contacts = () => {
             <div className="flex flex-row items-center p-4 gap-4">
               <Mail size="40" color="orange" />
               <p className="text-xl">
-                {contacts.find((elem) => elem.icon === 'email').path}{' '}
+                {contacts && contacts.find((elem) => elem.icon === 'email')?.path}{' '}
               </p>
             </div>
             <div className="flex flex-row items-center p-4 gap-4 mb-6">
               <Phone size="40" color="green" />
               <p className="text-xl">
-                {contacts.find((elem) => elem.icon === 'phone').path}{' '}
+                {contacts && contacts.find((elem) => elem.icon === 'phone')?.path}{' '}
               </p>
             </div>
           </HalfRow>

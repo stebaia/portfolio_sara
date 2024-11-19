@@ -5,4 +5,5 @@ export const mockAction = async (formData: FormData) => {
   const lastName = formData.get('lastName');
   const email = formData.get('email');
   const idea = formData.get('idea');
+  console.log(firstName, lastName, email, idea)
 };

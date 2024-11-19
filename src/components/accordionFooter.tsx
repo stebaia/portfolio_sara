@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-interface AccItem {
+export interface AccItem {
   answer: string;
   question: string;
 }
@@ -21,7 +21,7 @@ const CustomAccordion = ({ ...props }: AccordionFooterProps) => {
         {props.items.map((item, index) => (
           <AccordionItem
             key={index}
-            value={index + 1}
+            value={String(index + 1)}
             className="border-b border-slate-700 w-full"
           >
             <AccordionTrigger className="text-white text-xl whitespace-normal w-full p-4">

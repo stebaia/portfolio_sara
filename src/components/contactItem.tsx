@@ -21,7 +21,7 @@ interface icon {
 interface ContactsHeaderProps {
   title: string;
   subtitle: string;
-  email: string;
+  email?: string;
 }
 
 export const ContactsHeader = ({ ...props }: ContactsHeaderProps) => {
@@ -61,10 +61,19 @@ export const TextArea = ({ field, label, ...props }: TextAreaProps) => {
   );
 };
 
-export const ContactCarousel = ({ icons }: icon[]) => {
+interface icon {
+  icon: string;
+  path: string;
+}
+
+interface ContactCarouselProps {
+  icons?: icon[];
+}
+
+export const ContactCarousel  = ({ icons } : ContactCarouselProps) => {
   return (
     <div id="contact" className="flex flex-row gap-8 flex-wrap  mt-20">
-      {icons.map((elem, index) => {
+      {icons && icons.map((elem, index) => {
         switch (elem.icon) {
           case 'phone':
             return (

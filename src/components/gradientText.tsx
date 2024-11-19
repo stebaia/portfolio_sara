@@ -1,7 +1,8 @@
-import { ReactElement } from 'react';
+import { ReactNode } from "react";
+
 
 interface GradientTextProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 const GradientText = ({ ...props }: GradientTextProps) => {
   return (

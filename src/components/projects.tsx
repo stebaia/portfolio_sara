@@ -9,7 +9,6 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
   CardDescription,
 } from '@/components/ui/card';
 import {
@@ -80,7 +79,7 @@ const ProjectItems = ({ ...props }: ProjectItemsProps) => {
 };
 
 interface ProjectsHeaderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const ProjectsHeader = ({ ...props }: ProjectsHeaderProps) => {
@@ -94,7 +93,10 @@ export const ProjectsHeader = ({ ...props }: ProjectsHeaderProps) => {
   );
 };
 
-export const Projects = ({ children }: ReactNode) => {
+interface ProjectsProps {
+  children : React.ReactNode;
+}
+export const Projects = ({ children }: ProjectsProps) => {
   return <div>{children}</div>;
 };
 

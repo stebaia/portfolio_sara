@@ -93,11 +93,11 @@ export default function Home() {
               <p className="font-bold text-3xl md:text-4xl ">
                 <GradientText>D E V E L O P E R</GradientText>
               </p>
-              <p className="font-bold text-4xl md:text-6xl mb-6">That's me!</p>
+              <p className="font-bold text-4xl md:text-6xl mb-6">That&aposs me!</p>
             </HalfRow>
             <HalfRow>
               <Paragraph>
-                I'm an app developer with 5 years of experience in mobile
+                I&aposm an app developer with 5 years of experience in mobile
                 technologies, specializing in iOS and Android apps. Proficient
                 in Flutter, Kotlin, and Java, I build efficient, modern apps
                 using the latest tools. I also have project management

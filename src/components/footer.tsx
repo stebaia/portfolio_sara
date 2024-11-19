@@ -1,6 +1,6 @@
-import AccordionFooter, {
-  AccordionFooterProps,
-} from '@/components/accordionFooter';
+import {AccItem} from '../components/accordionFooter'
+
+
 import { ContactCarousel } from '@/components/contactItem';
 interface icon {
   icon: string;
@@ -9,6 +9,7 @@ interface icon {
 
 interface FooterProps {
   icons?: icon[];
+  accordItems: AccItem[];
   copyright?: string;
 }
 

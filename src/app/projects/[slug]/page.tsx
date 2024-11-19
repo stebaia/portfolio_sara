@@ -5,9 +5,10 @@ import type { Metadata } from "next/types";
 import GradientText from '@/components/gradientText'
 import Center from '@/components/center'
 
-export async function getBlogPostMetadata(slug: string): Promise<BlogPostData> {
+
+ async function getBlogPostMetadata(slug: string): Promise<BlogPostData> {
 	try {
-	  const file = await import("@/articles/" + slug + ".mdx");
+	  const file = await import(`@/articles/${slug}.mdx`);
 
 		if (file?.metadata) {
 			if (!file.metadata.title || !file.metadata.description) {
@@ -21,8 +22,8 @@ export async function getBlogPostMetadata(slug: string): Promise<BlogPostData> {
 		} else {
 			throw new Error(`Unable to find metadata for ${slug}.mdx`);
 		}
-	} catch (error: any) {
-		console.error(error?.message);
+	} catch (error) {
+		console.error(error);
 		return notFound();
 	}
 }
@@ -38,15 +39,17 @@ export type PostMetadata = Metadata & {
 
 export type BlogPostData = {
 	slug: string;
-	metadata: Metadata;
+	metadata: PostMetadata;
 };
 
+type Params = Promise<{ slug: string }>
 
-export default async function BlogPage({ params }: BlogPageProps) {
-	const BlogMarkdown = dynamic(() => import('@/articles/' + params.slug + ".mdx"));
-	const { metadata } = await getBlogPostMetadata(params.slug);
+export default async function BlogPage({ params }: { params: Params }) {
+  const {slug} =  await params;
+  const BlogMarkdown = dynamic(() => import(`@/articles/${slug}.mdx`));
+	const { metadata } = await getBlogPostMetadata(slug);
 	const title = `${metadata.title ?? ""}`;
-
+  
 	return (
 		<div>
 			<Center>

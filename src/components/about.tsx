@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface AboutProps {
   children: ReactNode;
 }
